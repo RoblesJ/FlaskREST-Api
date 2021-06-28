@@ -19,9 +19,7 @@ api = Api(app)
 # take the values from authenticate.py to verify identity through flas_JWT
 jwt = JWT(app, authenticate, identity)
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+
 
 
 #HTML redirections, and theyr resources.
